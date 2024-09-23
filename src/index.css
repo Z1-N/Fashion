@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&family=Rufina:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom fonts */
+@font-face {
+  font-family: 'Elephant';
+  src: url('/fonts/Elephant-Regular.ttf') format('truetype');
+  font-weight: 400 , 300 , 200 , 100 , 500 , 600 , 700 , 800 , 900;
+}
+
+
+
+.modern-underline a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.modern-underline a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #224f34;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.modern-underline a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
